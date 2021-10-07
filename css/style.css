@@ -10,18 +10,24 @@ body {
     font-family: "BPG Banner Caps", sans-serif;
 }
 
+/* Container */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Logo Start */
 .logo_start {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.logo_start.hideLogo {
+    display: none;
 }
 
 .logo_start img {
@@ -54,6 +60,10 @@ body {
     display: none;
 }
 
+.header.activeHeader {
+    display: flex;
+}
+
 .redberry_header {
     color: #FE3B1F;
     font-weight: bold;
@@ -77,14 +87,19 @@ body {
 .box-container {
     width: 100%;
     display: flex;
-    position: relative;
     display: none;
 }
 
+.box-container.activeBox {
+    display: flex;
+}
+
+/* Form */
 .form {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
+    margin-right: 50px;
 }
 
 .attention {
@@ -116,14 +131,14 @@ body {
 }
 
 .box-img {
-    position: absolute;
-    right: 0;
-    top: 12px;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 .box-img img {
-    width: 704px;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 /* Yellow box */
@@ -131,23 +146,116 @@ body {
     position: absolute;
     background: #e3e330;
     width: 600px;
-    top: 30%;
-    right: 5%;
-    height: 100px;
+    top: 23%;
+    right: 9%;
+    height: 70px;
     opacity: .7;
 }
 
+/* Arrows */
 .arrows {
     display: flex;
-    margin-top: 140px;
-    align-items: center;
     justify-content: center;
+    position: relative;
     display: none;
 }
+
+.arrows.activeArrows {
+    display: flex;
+}
+
+.arrows img {
+    position: fixed;
+    top: 86%;
+}
+
+.arrows img:nth-child(1) {
+    right: 45%;
+}
+
+.arrows img:nth-child(2) {
+    left: 45%;
+    display: none;
+}
+
+.arrows img:nth-child(2).activeArrowLeft {
+    display: block;
+}
+
 
 .arrows img {
     cursor: pointer;
     padding: 10px;
+}
+
+/* Second Page */
+.form-radio {
+    width: 500px;
+}
+
+.form-radio p {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.radio__input {
+    display: none;
+}
+
+.radio__radio {
+    width: 1.20em;
+    height: 1.20em;
+    border: 2px solid #232323;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 5px 10px 8px 0;
+}
+
+.radio__radio::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #232323;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+.radio__input:checked ~ .radio__radio::after {
+    transform: scale(1);
+}
+
+.second_question {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.second_page {
+    padding-top: 60px;
+    display: none;
+}
+
+.second_page.activePage {
+    display: flex;
+}
+
+.second_page .form-radio {
+    display: flex;
+    flex-direction: column;
+}
+
+.second_page-img img {
+    width: 100%;
+    height: 720px;
 }
 
 
