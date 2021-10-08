@@ -103,6 +103,30 @@ body {
     margin-right: 50px;
 }
 
+
+#submit {
+    opacity: 0;
+}
+
+.form small {
+    margin-left: 20px;
+    color: #F15524;
+    visibility: hidden;
+}
+
+
+.first_input.error {
+    visibility: visible;
+}
+
+.second_input.error {
+    visibility: visible;
+}
+
+.third_input.error {
+    visibility: visible;
+}
+
 .attention {
     margin-top: 100px;
     font-size: 16px;
@@ -128,8 +152,9 @@ body {
 .form input {
     padding: 10px;
     width: 400px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
+
 
 .box-img {
     height: 100%;

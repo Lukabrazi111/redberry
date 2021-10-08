@@ -4,11 +4,9 @@ const box_container = document.getElementById("box-container");
 const arrows = document.getElementById("arrows");
 const logo_start = document.querySelector(".logo_start");
 const arrow_right = document.querySelector(".arrow-right");
-const second_page = document.getElementById("second_page");
 const arrow_left = document.querySelector(".arrow-left");
 const slides = document.querySelectorAll(".slide");
 const num_header = document.querySelector(".num_header");
-
 
 let current = 0;
 
@@ -27,7 +25,6 @@ function reset() {
     }
 }
 
-
 // Slide right
 function slideRight() {
     reset();
@@ -44,6 +41,7 @@ function slideRight() {
         arrow_right.style.display = 'none';
         arrow_left.style.display = "block";
     }
+
     current++;
 }
 

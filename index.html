@@ -24,14 +24,19 @@
 
     <!-- First page -->
     <div class="box-container slide" id="box-container">
-        <form action="#" class="form">
+        <form method="post" name="form" action="#" class="form" id="form">
             <label>სახელი*</label>
-            <input placeholder="იოსებ" type="text">
+            <input id="username" placeholder="იოსებ" type="text">
+            <small class="first_input">Error message</small>
             <label>გვარი*</label>
-            <input placeholder="ჯუღაშვილი" type="text">
+            <input id="lastname" placeholder="ჯუღაშვილი" type="text">
+            <small class="second_input">Error message</small>
             <label>მეილი*</label>
-            <input placeholder="fbi@redberry.ge" type="text">
+            <input id="email" placeholder="fbi@redberry.ge" type="email">
+            <small class="third_input">Error message</small>
             <p class="attention">*-ით მონიშნული ველების შევსება სავალდებულოა</p>
+
+            <input type="submit" id="submit" name="submit">
         </form>
 
 
@@ -75,6 +80,7 @@
                 <!--                    არა-->
                 <!--                </label>-->
             </div>
+
         </form>
 
         <div class="second_page-img">
@@ -265,6 +271,7 @@
 
 <!-- Js -->
 <script src="js/app.js"></script>
+<script src="js/form.js"></script>
 </body>
 </html>
 
