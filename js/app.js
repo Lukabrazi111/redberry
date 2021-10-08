@@ -7,6 +7,7 @@ const arrow_right = document.querySelector(".arrow-right");
 const second_page = document.getElementById("second_page");
 const arrow_left = document.querySelector(".arrow-left");
 const slides = document.querySelectorAll(".slide");
+const num_header = document.querySelector(".num_header");
 
 
 let current = 0;
@@ -33,6 +34,7 @@ function slideRight() {
     box_container.classList.add("activeBox");
     for (let i = 0; i < slides.length; i++) {
         slides[current + 1].style.display = "flex";
+        num_header.textContent = `${current + 2}/4`;
     }
 
     arrow_right.style.display = "block";
@@ -49,6 +51,7 @@ function slideLeft() {
     reset();
     for (let i = 0; i < slides.length; i++) {
         slides[current - 1].style.display = "flex";
+        num_header.textContent = `${current}/4`;
     }
 
     if (current === 1) {
