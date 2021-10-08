@@ -24,7 +24,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none;
     height: 100vh;
 }
 
@@ -59,6 +58,7 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative;
+    display: none;
 }
 
 .header.activeHeader {
@@ -88,6 +88,7 @@ body {
 .box-container {
     width: 100%;
     display: flex;
+    display: none;
 }
 
 .box-container.activeBox {
@@ -157,6 +158,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+    display: none;
 }
 
 .arrows.activeArrows {
@@ -242,6 +244,7 @@ body {
 
 .second_page {
     padding-top: 60px;
+    display: none;
 }
 
 .second_page.activePage {
@@ -262,6 +265,11 @@ body {
 
 .third_page {
     padding-top: 60px;
+    display: none;
+}
+
+.third_page.activeThirdPage {
+    display: block;
 }
 
 .third_page-img img {
@@ -280,6 +288,11 @@ body {
 /* Fourth Page */
 .fourth_page {
     padding: 60px 0;
+    display: none;
+}
+
+.form-fourth.activeFourthPage {
+    display: block;
 }
 
 .fourth_page img {
