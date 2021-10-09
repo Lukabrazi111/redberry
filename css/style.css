@@ -262,6 +262,14 @@ body.active {
     margin-left: 15px;
 }
 
+.radio2 {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
 .radio__input {
     display: none;
 }

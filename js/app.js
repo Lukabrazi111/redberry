@@ -72,11 +72,9 @@ function getRadioButtons() {
     const radioButtonEls = document.querySelectorAll(".radio");
 
     radioButtonEls.forEach(radioButtonEl => {
-        radioButtonEl.addEventListener("click", function (e) {
+        radioButtonEl.addEventListener("click", function () {
             if (this.classList.contains("radio")) {
                 arrow_right.style.display = "block";
-            } else {
-                arrow_right.style.display = "none";
             }
         })
     });
