@@ -14,5 +14,4 @@ finish_submit.addEventListener("click", function () {
 
     body.classList.add("active");
 
-
 });

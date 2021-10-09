@@ -15,7 +15,6 @@ let clicked = false;
 start.addEventListener("click", function () {
     box_container.classList.add("activeBox");
     header.classList.add("activeHeader");
-    arrows.classList.add("activeArrows");
     logo_start.classList.add("hideLogo");
 });
 
@@ -44,7 +43,7 @@ function slideRight() {
         arrow_left.style.display = "block";
     }
 
-    getRadioButtons();
+    // getRadioButtons();
 
     current++;
 }
@@ -64,21 +63,22 @@ function slideLeft() {
         arrow_right.style.display = "block";
     }
 
-
     current--;
 }
 
-function getRadioButtons() {
-    const radioButtonEls = document.querySelectorAll(".radio");
-
-    radioButtonEls.forEach(radioButtonEl => {
-        radioButtonEl.addEventListener("click", function () {
-            if (this.classList.contains("radio")) {
-                arrow_right.style.display = "block";
-            }
-        })
-    });
-}
+// function getRadioButtons() {
+//     const radioButtonEls = document.querySelectorAll(".radio");
+//
+//     radioButtonEls.forEach(radioButtonEl => {
+//         radioButtonEl.addEventListener("click", function () {
+//             if (this.classList.contains("first_radio")) {
+//                 arrow_right.style.display = "block";
+//             } else {
+//                 arrow_right.style.display = "none";
+//             }
+//         });
+//     });
+// }
 
 arrow_right.addEventListener("click", function () {
     slideRight();

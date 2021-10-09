@@ -137,6 +137,11 @@ body.active {
     opacity: 0;
 }
 
+.submit_second {
+    opacity: 0;
+    margin-top: 120px;
+}
+
 .form small {
     margin-left: 20px;
     color: #F15524;

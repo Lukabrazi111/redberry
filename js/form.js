@@ -23,6 +23,7 @@ function checkInputs() {
     const letters = /^[A-Za-z]+$/;
     // const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
 
+
     // Username
     if (username_value.length < 3) {
         first_input.classList.add('error');
@@ -62,7 +63,15 @@ function checkInputs() {
         third_input.textContent = "";
     }
 
+    if (!first_input.classList.contains("error") && !second_input.classList.contains("error") && !third_input.classList.contains("error")) {
+        arrows.classList.add("activeArrows");
+    } else {
+        arrows.classList.remove("activeArrows");
+    }
+
 }
+
+
 
 
 
