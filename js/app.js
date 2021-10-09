@@ -52,6 +52,9 @@ function slideLeft() {
         num_header.textContent = `${current}/4`;
     }
 
+    arrow_right.style.display = "block";
+    arrow_left.style.display = "block";
+
     if (current === 1) {
         arrow_left.style.display = "none";
         arrow_right.style.display = "block";

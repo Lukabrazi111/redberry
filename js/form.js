@@ -11,7 +11,6 @@ third_input = document.querySelector(".third_input");
 // Check for submit
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log('123');
     checkInputs();
 })
 

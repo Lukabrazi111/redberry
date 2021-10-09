@@ -24,7 +24,7 @@
 
     <!-- First page -->
     <div class="box-container slide" id="box-container">
-        <form method="post" name="form" action="#" class="form" id="form">
+        <form action="#" class="form" id="form" method="post" name="form">
             <label>სახელი*</label>
             <input id="username" placeholder="იოსებ" type="text">
             <small class="first_input">Error message</small>
@@ -36,7 +36,7 @@
             <small class="third_input">Error message</small>
             <p class="attention">*-ით მონიშნული ველების შევსება სავალდებულოა</p>
 
-            <input type="submit" id="submit" name="submit">
+            <input id="submit" name="submit" type="submit">
         </form>
 
 
@@ -50,17 +50,17 @@
     <div class="second_page slide" id="second_page">
         <form action="#" class="form-radio">
             <p>გაქვს გადატანილი Covid-19?*</p>
-            <label class="radio">
+            <label class="radio first_radio">
                 <input class="radio__input" name="myRadioField" type="radio">
                 <div class="radio__radio"></div>
                 კი
             </label>
-            <label class="radio">
+            <label class="radio second_radio">
                 <input class="radio__input" name="myRadioField" type="radio">
                 <div class="radio__radio"></div>
                 არა
             </label>
-            <label class="radio">
+            <label class="radio third_radio">
                 <input class="radio__input" name="myRadioField" type="radio">
                 <div class="radio__radio"></div>
                 ახლა მაქვს
@@ -68,17 +68,32 @@
 
             <!-- Second Question -->
             <div class="second_question">
-                <!--                <p>ანტისხეულების ტესტი გაქვს გაკეთებული?*</p>-->
-                <!--                <label class="radio">-->
-                <!--                    <input class="radio__input" id="antiVirus" name="antiVirus" type="radio">-->
-                <!--                    <div class="radio__radio"></div>-->
-                <!--                    კი-->
-                <!--                </label>-->
-                <!--                <label class="radio">-->
-                <!--                    <input class="radio__input" name="antiVirus" type="radio">-->
-                <!--                    <div class="radio__radio"></div>-->
-                <!--                    არა-->
-                <!--                </label>-->
+                <!--                                <p>ანტისხეულების ტესტი გაქვს გაკეთებული?*</p>-->
+                <!--                                <label class="radio">-->
+                <!--                                    <input class="radio__input" id="antiVirus" name="antiVirus" type="radio">-->
+                <!--                                    <div class="radio__radio"></div>-->
+                <!--                                    კი-->
+                <!--                                </label>-->
+                <!--                                <label class="radio">-->
+                <!--                                    <input class="radio__input" name="antiVirus" type="radio">-->
+                <!--                                    <div class="radio__radio"></div>-->
+                <!--                                    არა-->
+                <!--                                </label>-->
+            </div>
+
+            <div class="second_question2">
+                <!--                <p>თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების რაოდენობა*</p>-->
+                <!--                <div action="#" class="remember_box">-->
+                <!--                    <input class="remember" type="text" name="remember" placeholder="რიცხვი">-->
+                <!--                    <input class="remember" type="text" name="remember" placeholder="ანტისხეულების რაოდენობა">-->
+                <!--                </div>-->
+            </div>
+
+            <div class="second_question3">
+                <!--                <p>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*</p>-->
+                <!--                <div class="date">-->
+                <!--                    <input type="date" class="date">-->
+                <!--                </div>-->
             </div>
 
         </form>
@@ -92,78 +107,88 @@
     <div class="third_page slide" id="third_page">
         <form action="#" class="form-radio">
             <p>უკვე აცრილი ხარ?*</p>
-            <label class="radio">
+            <label class="radio first_virus">
                 <input class="radio__input" name="myRadioField" type="radio">
                 <div class="radio__radio"></div>
                 კი
             </label>
-            <label class="radio">
+            <label class="radio second_virus">
                 <input class="radio__input" name="myRadioField" type="radio">
                 <div class="radio__radio"></div>
                 არა
             </label>
 
             <!-- Second Question -->
-            <div class="second_question">
-<!--                <p>აირჩიე რა ეტაპზე ხარ*</p>-->
-<!--                <label class="radio">-->
-<!--                    <input class="radio__input" id="antiVirus" name="antiVirus" type="radio">-->
-<!--                    <div class="radio__radio"></div>-->
-<!--                    პირველი დოზა და დარეგისტრირებული ვარ მეორეზე-->
-<!--                </label>-->
-<!--                <label class="radio">-->
-<!--                    <input class="radio__input" name="antiVirus" type="radio">-->
-<!--                    <div class="radio__radio"></div>-->
-<!--                    სრულად აცრილი ვარ-->
-<!--                </label>-->
-<!--                <label class="radio">-->
-<!--                    <input class="radio__input" name="antiVirus" type="radio">-->
-<!--                    <div class="radio__radio"></div>-->
-<!--                    პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე-->
-<!--                </label>-->
-
-
-                <!--                <p>რას ელოდები?*</p>-->
+            <div class="virus_question">
+                <!--                <p>აირჩიე რა ეტაპზე ხარ*</p>-->
                 <!--                <label class="radio">-->
-                <!--                    <input class="radio__input" id="antiVirus" name="antiVirus" type="radio">-->
+                <!--                    <input class="radio__input" id="etapi" name="etapi" type="radio">-->
                 <!--                    <div class="radio__radio"></div>-->
-                <!--                    დარეგისტრირებული ვარ და ველოდები რიცხვს-->
+                <!--                    პირველი დოზა და დარეგისტრირებული ვარ მეორეზე-->
                 <!--                </label>-->
                 <!--                <label class="radio">-->
-                <!--                    <input class="radio__input" name="antiVirus" type="radio">-->
+                <!--                    <input class="radio__input" name="etapi" type="radio">-->
                 <!--                    <div class="radio__radio"></div>-->
-                <!--                    არ ვგეგმავ-->
+                <!--                    სრულად აცრილი ვარ-->
                 <!--                </label>-->
                 <!--                <label class="radio">-->
-                <!--                    <input class="radio__input" name="antiVirus" type="radio">-->
+                <!--                    <input class="radio__input" name="etapi" type="radio">-->
                 <!--                    <div class="radio__radio"></div>-->
-                <!--                    გადატანილი მაქვს და ვგეგმავ აცრას-->
+                <!--                    პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე-->
                 <!--                </label>-->
-
             </div>
 
-            <!--            <div class="third_question">-->
-            <!--                ახალი პროტოკოლით კოვიდის გადატანიდან 1 თვის შემდეგ შეგიძლიათ ვაქცინის გაკეთება. <br><br>-->
-            <!--                👉რეგისტრაციის ბმული-->
+            <div class="virus_questions3">
+                <!--                            <p>რას ელოდები?*</p>-->
+                <!--                            <label class="radio">-->
+                <!--                                <input class="radio__input" id="antiVirus" name="antiVirus" type="radio">-->
+                <!--                                <div class="radio__radio"></div>-->
+                <!--                                დარეგისტრირებული ვარ და ველოდები რიცხვს-->
+                <!--                            </label>-->
+                <!--                            <label class="radio">-->
+                <!--                                <input class="radio__input" name="antiVirus" type="radio">-->
+                <!--                                <div class="radio__radio"></div>-->
+                <!--                                არ ვგეგმავ-->
+                <!--                            </label>-->
+                <!--                            <label class="radio">-->
+                <!--                                <input class="radio__input" name="antiVirus" type="radio">-->
+                <!--                                <div class="radio__radio"></div>-->
+                <!--                                გადატანილი მაქვს და ვგეგმავ აცრას-->
+                <!--                            </label>-->
+            </div>
+
+
+            <div class="virus_question2">
+                <!--                <p>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*</p>-->
+                <!--                <div class="date">-->
+                <!--                    <input type="date" class="date">-->
+                <!--                </div>-->
+            </div>
+
+
+
+                        <div class="virus_answer5">
+<!--                            ახალი პროტოკოლით კოვიდის გადატანიდან 1 თვის შემდეგ შეგიძლიათ ვაქცინის გაკეთება. <br><br>-->
+<!--                            👉რეგისტრაციის ბმული-->
+<!--                            <a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>-->
+                        </div>
+
+
+            <!--            <div class="virus_answer2">-->
             <!--                <a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>-->
             <!--            </div>-->
 
 
-            <!--            <div class="third_question">-->
-            <!--                <a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>-->
-            <!--            </div>-->
+                                                <div class="virus_answer3">
+<!--                                                    რომ არ გადადო,-->
+<!--                                                    ბარემ ახლავე დარეგისტრირდი-->
+<!--                                                    <a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>-->
+                                                </div>
 
 
-            <!--                                    <div class="third_question">-->
-            <!--                                        რომ არ გადადო,-->
-            <!--                                        ბარემ ახლავე დარეგისტრირდი-->
-            <!--                                        <a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>-->
-            <!--                                    </div>-->
-
-
-            <!--            <div class="third_question">-->
-            <!--                <a href="https://booking.moh.gov.ge/">👉 https://booking.moh.gov.ge/</a>-->
-            <!--            </div>-->
+                        <div class="virus_answer4">
+<!--                            <a href="https://booking.moh.gov.ge/">👉 https://booking.moh.gov.ge/</a>-->
+                        </div>
 
 
         </form>
@@ -246,13 +271,16 @@
 
             <div class="questions">
                 <p class="question">რას ფიქრობ ფიზიკურ შეკრებებზე?</p>
-                <textarea name="first_area" id="first_area" cols="30" rows="10"></textarea>
+                <textarea cols="30" id="first_area" name="first_area" rows="10"></textarea>
             </div>
 
             <div class="questions">
-                <p class="question">რას ფიქრობ ფიზიკურ შეკრებებზე?</p>
-                <textarea name="second_area" id="second_area" cols="30" rows="10"></textarea>
+                <p class="question">რას ფიქრობ არსებულ გარემოზე:
+                    რა მოგწონს, რას დაამატებდი, რას შეცვლიდი?</p>
+                <textarea cols="30" id="second_area" name="second_area" rows="10"></textarea>
             </div>
+
+            <button class="submit" name="submit" type="submit">დასრულება</button>
         </form>
 
 
@@ -269,9 +297,11 @@
     </div>
 </div>
 
-<!-- Js -->
+<!-- Js script -->
 <script src="js/app.js"></script>
 <script src="js/form.js"></script>
+<script src="js/second_page.js"></script>
+<script src="js/third_page.js"></script>
 </body>
 </html>
 
