@@ -82,7 +82,6 @@ function getRadioButtons() {
     });
 }
 
-
 arrow_right.addEventListener("click", function () {
     slideRight();
 });

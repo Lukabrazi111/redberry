@@ -11,6 +11,36 @@ body {
     font-family: "BPG Banner Caps", sans-serif;
 }
 
+body.active {
+    background: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.last_text {
+    color: #fff;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.last_text-container {
+    display: none;
+}
+
+.big_star {
+    margin-right: 340px;
+    margin-bottom: 20px;
+}
+
+.lil_star {
+    margin-left: 360px;
+    margin-top: 10px;
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -435,7 +465,7 @@ virus_question2 {
     font-size: 14px;
 }
 
-.submit {
+.finish_submit {
     padding: 15px 20px;
     background: #208298;
     border: none;
