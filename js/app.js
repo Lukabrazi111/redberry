@@ -9,6 +9,7 @@ const slides = document.querySelectorAll(".slide");
 const num_header = document.querySelector(".num_header");
 
 let current = 0;
+let clicked = false;
 
 // Start button
 start.addEventListener("click", function () {

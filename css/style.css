@@ -314,6 +314,21 @@ second_question2 {
     flex-direction: column;
 }
 
+.second_page-img {
+    position: relative;
+}
+
+.red_circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #e00a0a;
+    position: absolute;
+    opacity: .8;
+    top: 26%;
+    left: 6%;
+}
+
 .second_page-img img {
     width: 100%;
     height: 720px;
@@ -339,6 +354,36 @@ virus_question2 {
 .third_page.activeThirdPage {
     display: block;
 }
+
+.third_page-img {
+    position: relative;
+}
+
+/* Yellow star */
+.yellow_star {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 104px solid transparent;
+    border-right: 124px solid transparent;
+    border-bottom: 115px solid #d9d92e;
+    top: -4%;
+    left: 5%;
+    opacity: .7;
+    transform: rotate(-5deg);
+}
+
+.yellow_star::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 97px solid transparent;
+    border-right: 78px solid transparent;
+    border-top: 131px solid #d9d92e;
+    margin: 31px 0 0 -86px;
+}
+
 
 .third_page-img img {
     width: 100%;
