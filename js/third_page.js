@@ -10,17 +10,17 @@ const virus_answer5 = document.querySelector(".virus_answer5");
 first_virus.addEventListener("click", function () {
     virus_question.innerHTML = `
                 <p>აირჩიე რა ეტაპზე ხარ*</p>
-                <label class="radio" onclick="resetAnswer()">
+                <label class="radio radio2" onclick="resetAnswer()">
                     <input class="radio__input" id="etapi" name="etapi" type="radio">
                     <div class="radio__radio"></div>
                     პირველი დოზა და დარეგისტრირებული ვარ მეორეზე
                 </label>
-                <label class="radio" onclick="resetAnswer()">
+                <label class="radio radio2" onclick="resetAnswer()">
                     <input class="radio__input" name="etapi" type="radio">
                     <div class="radio__radio"></div>
                     სრულად აცრილი ვარ
                 </label>
-                <label onclick="addVirusAnswer()" class="radio">
+                <label onclick="addVirusAnswer()" class="radio radio2">
                     <input class="radio__input" name="etapi" type="radio">
                     <div class="radio__radio"></div>
                     პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე

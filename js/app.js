@@ -30,18 +30,21 @@ function reset() {
 function slideRight() {
     reset();
     box_container.classList.add("activeBox");
+
     for (let i = 0; i < slides.length; i++) {
         slides[current + 1].style.display = "flex";
         num_header.textContent = `${current + 2}/4`;
     }
 
-    arrow_right.style.display = "block";
+    arrow_right.style.display = "none";
     arrow_left.style.display = "block";
 
     if (current === 2) {
         arrow_right.style.display = 'none';
         arrow_left.style.display = "block";
     }
+
+    getRadioButtons();
 
     current++;
 }
@@ -61,8 +64,24 @@ function slideLeft() {
         arrow_right.style.display = "block";
     }
 
+
     current--;
 }
+
+function getRadioButtons() {
+    const radioButtonEls = document.querySelectorAll(".radio");
+
+    radioButtonEls.forEach(radioButtonEl => {
+        radioButtonEl.addEventListener("click", function (e) {
+            if (this.classList.contains("radio")) {
+                arrow_right.style.display = "block";
+            } else {
+                arrow_right.style.display = "none";
+            }
+        })
+    });
+}
+
 
 arrow_right.addEventListener("click", function () {
     slideRight();
