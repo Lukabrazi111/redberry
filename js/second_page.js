@@ -134,7 +134,7 @@ function secondRadioButton2() {
     second_question3.innerHTML = `
                 <p>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*</p>
                 <div class="date_div">
-                    <input type="date" class="date remember">
+                    <input type="date" class="date remember" type="submit">
                 </div>
     `;
 
