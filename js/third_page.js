@@ -6,7 +6,6 @@ const virus_answer3 = document.querySelector(".virus_answer3");
 const virus_answer4 = document.querySelector(".virus_answer4");
 const virus_answer5 = document.querySelector(".virus_answer5");
 
-
 first_virus.addEventListener("click", function () {
     virus_question.innerHTML = `
                 <p>აირჩიე რა ეტაპზე ხარ*</p>
@@ -31,23 +30,25 @@ first_virus.addEventListener("click", function () {
 
     radio.forEach(function (label) {
         label.addEventListener("click", function (e) {
-            if (e.target.classList.contains("radio_tape1") || e.target.classList.contains("radio_tape2") || e.target.classList.contains("radio_tape3")) {
+            if (
+                e.target.classList.contains("radio_tape1") ||
+                e.target.classList.contains("radio_tape2") ||
+                e.target.classList.contains("radio_tape3")
+            ) {
                 arrow_right.style.display = "block";
             }
 
             if (e.target.classList.contains("second_virus")) {
                 arrow_right.style.display = "none";
             }
-        })
+        });
     });
-
 
     virus_questions3.innerHTML = ``;
     virus_answer5.innerHTML = ``;
     virus_answer4.innerHTML = ``;
     virus_answer3.innerHTML = ``;
 });
-
 
 second_virus.addEventListener("click", function () {
     virus_questions3.innerHTML = `
@@ -73,16 +74,19 @@ second_virus.addEventListener("click", function () {
 
     radio.forEach(function (label) {
         label.addEventListener("click", function (e) {
-            if (e.target.classList.contains("radio_tape4") || e.target.classList.contains("radio_tape5") || e.target.classList.contains("radio_tape6")) {
+            if (
+                e.target.classList.contains("radio_tape4") ||
+                e.target.classList.contains("radio_tape5") ||
+                e.target.classList.contains("radio_tape6")
+            ) {
                 arrow_right.style.display = "block";
             }
 
             if (e.target.classList.contains("first_virus")) {
                 arrow_right.style.display = "none";
             }
-        })
+        });
     });
-
 
     virus_answer3.innerHTML = ``;
     virus_question.innerHTML = ``;
@@ -93,13 +97,13 @@ function readyVaccinated() {
         ახალი პროტოკოლით კოვიდის გადატანიდან 1 თვის შემდეგ შეგიძლიათ ვაქცინის გაკეთება. <br><br>
         👉რეგისტრაციის ბმული
         <a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>
-    `
+    `;
     virus_answer4.innerHTML = ``;
 }
 
 function noVaccinatedHandler() {
     virus_answer4.innerHTML = `<a href="https://booking.moh.gov.ge/">👉 https://booking.moh.gov.ge/</a>`;
-    virus_answer5.innerHTML = ``
+    virus_answer5.innerHTML = ``;
 }
 
 function resetAnswer() {
@@ -116,20 +120,5 @@ function addVirusAnswer() {
              რომ არ გადადო,
              ბარემ ახლავე დარეგისტრირდი
              <a href="https://booking.moh.gov.ge/">https://booking.moh.gov.ge/</a>
-    `
+    `;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

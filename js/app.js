@@ -21,7 +21,7 @@ start.addEventListener("click", function () {
 // Reset all pages (display = none)
 function reset() {
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+        slides[i].style.display = "none";
     }
 }
 
@@ -39,7 +39,7 @@ function slideRight() {
     arrow_left.style.display = "block";
 
     if (current === 2) {
-        arrow_right.style.display = 'none';
+        arrow_right.style.display = "none";
         arrow_left.style.display = "block";
     }
 
@@ -86,5 +86,4 @@ arrow_right.addEventListener("click", function () {
 
 arrow_left.addEventListener("click", function () {
     slideLeft();
-})
-
+});

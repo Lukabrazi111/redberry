@@ -69,14 +69,13 @@ first_radio.addEventListener("click", function () {
         second_question.innerHTML = ``;
         second_question2.innerHTML = ``;
         second_question3.innerHTML = ``;
-    }
+    };
 
     third_radio.onclick = function () {
         second_question.innerHTML = ``;
         second_question2.innerHTML = ``;
         second_question3.innerHTML = ``;
-    }
-
+    };
 });
 
 function secondRadioButton() {
@@ -91,7 +90,6 @@ function secondRadioButton() {
     input2.setAttribute("type", "text");
     input2.setAttribute("name", "remember");
     input2.setAttribute("placeholder", "ანტისხეულების რაოდენობა");
-
 
     second_question2.innerHTML = `
                 <div class="remember_box">
@@ -113,8 +111,8 @@ function secondRadioButton() {
                 } else if (e.target.classList.contains("second_radio-button")) {
                     arrow_right.style.display = "none";
                 }
-            })
-        })
+            });
+        });
 
         inputs.forEach((input) => {
             const inputLength = input.value.length;
@@ -124,7 +122,7 @@ function secondRadioButton() {
             } else {
                 arrow_right.style.display = "block";
             }
-        })
+        });
     });
 
     second_question3.innerHTML = ``;
@@ -140,4 +138,3 @@ function secondRadioButton2() {
 
     second_question2.innerHTML = ``;
 }
-
