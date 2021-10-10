@@ -4,7 +4,7 @@ const third_radio = document.querySelector(".third_radio");
 const second_question = document.querySelector(".second_question");
 const second_question2 = document.querySelector(".second_question2");
 const second_question3 = document.querySelector(".second_question3");
-
+const form_radio = document.getElementById("form-radio");
 
 first_radio.addEventListener("click", function () {
     // const label = document.createElement("label");
@@ -101,14 +101,40 @@ function secondRadioButton() {
                 </div>
     `;
 
+    form_radio.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const inputs = document.querySelectorAll(".remember");
+        const radio = document.querySelectorAll(".radio");
+
+        radio.forEach(function (label) {
+            label.addEventListener("click", function (e) {
+                if (e.target.classList.contains("third_radio-button")) {
+                    arrow_right.style.display = "none";
+                } else if (e.target.classList.contains("second_radio-button")) {
+                    arrow_right.style.display = "none";
+                }
+            })
+        })
+
+        inputs.forEach((input) => {
+            const inputLength = input.value.length;
+
+            if (inputLength === 0) {
+                arrow_right.style.display = "none";
+            } else {
+                arrow_right.style.display = "block";
+            }
+        })
+    });
+
     second_question3.innerHTML = ``;
 }
 
 function secondRadioButton2() {
     second_question3.innerHTML = `
                 <p>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*</p>
-                <div class="date">
-                    <input type="date" class="date">
+                <div class="date_div">
+                    <input type="date" class="date remember">
                 </div>
     `;
 
