@@ -97,11 +97,20 @@ function secondRadioButton2() {
     second_question3.innerHTML = `
                 <p>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*</p>
                 <div class="date_div">
-                    <input type="date" class="date remember" type="submit">
+                    <input onchange="selectDate(this)" type="date" class="date remember" type="submit">
                 </div>
     `;
 
     second_question2.innerHTML = ``;
     arrow_right.style.display = "none";
+}
+
+function selectDate(element) {
+    if (element.value !== "") {
+        arrow_right.style.display = "block";
+    } else {
+        arrow_right.style.display = "none";
+
+    }
 }
 
