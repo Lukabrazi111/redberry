@@ -8,7 +8,7 @@ second_input = document.querySelector(".second_input");
 third_input = document.querySelector(".third_input");
 
 // Check for submit
-form.addEventListener("submit", function (e) {
+form.addEventListener("keyup", function (e) {
     e.preventDefault();
     checkInputs();
 });
@@ -20,7 +20,7 @@ function checkInputs() {
     const email_value = email.value.trim();
 
     const letters = /^[A-Za-z]+$/;
-    // const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+    const regx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     // Username
     if (username_value.length < 3) {
@@ -62,6 +62,9 @@ function checkInputs() {
     if (email_value.length === 0) {
         third_input.classList.add("error");
         third_input.textContent = "შეავსეთ ველი";
+    } else if (!regx.test(String(email_value).toLowerCase())) {
+        third_input.classList.add("error");
+        third_input.textContent = "სწორად შეიყვანეთ ელ-ფოსტა";
     } else {
         third_input.classList.remove("error");
         third_input.textContent = "";

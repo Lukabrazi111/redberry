@@ -5,6 +5,24 @@ const second_question = document.querySelector(".second_question");
 const second_question2 = document.querySelector(".second_question2");
 const second_question3 = document.querySelector(".second_question3");
 const form_radio = document.getElementById("form-radio");
+const radio = document.querySelectorAll(".radio");
+
+
+radio.forEach(function (label) {
+    label.addEventListener("click", function (e) {
+        if (e.target.classList.contains("first_radio")) {
+            arrow_right.style.display = "none";
+        }
+
+        if (e.target.classList.contains("second_radio-button")) {
+            arrow_right.style.display = "none";
+        }
+
+        if (e.target.classList.contains("second_radio") || e.target.classList.contains("third_radio")) {
+            arrow_right.style.display = "block";
+        }
+    });
+});
 
 first_radio.addEventListener("click", function () {
     // const label = document.createElement("label");
@@ -65,6 +83,8 @@ first_radio.addEventListener("click", function () {
                 </label>
     `;
 
+
+
     second_radio.onclick = function () {
         second_question.innerHTML = ``;
         second_question2.innerHTML = ``;
@@ -99,20 +119,11 @@ function secondRadioButton() {
                 </div>
     `;
 
-    form_radio.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const inputs = document.querySelectorAll(".remember");
-        const radio = document.querySelectorAll(".radio");
 
-        radio.forEach(function (label) {
-            label.addEventListener("click", function (e) {
-                if (e.target.classList.contains("third_radio-button")) {
-                    arrow_right.style.display = "none";
-                } else if (e.target.classList.contains("second_radio-button")) {
-                    arrow_right.style.display = "none";
-                }
-            });
-        });
+
+
+    form_radio.addEventListener("keyup", function (e) {
+        const inputs = document.querySelectorAll(".remember");
 
         inputs.forEach((input) => {
             const inputLength = input.value.length;
@@ -137,4 +148,6 @@ function secondRadioButton2() {
     `;
 
     second_question2.innerHTML = ``;
+    arrow_right.style.display = "none";
 }
+

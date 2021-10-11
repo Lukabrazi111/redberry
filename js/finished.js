@@ -2,7 +2,7 @@ const finish_submit = document.getElementById("finish_submit");
 const body = document.querySelector("body");
 const lastTextContainer = document.querySelector(".last_text-container");
 
-finish_submit.addEventListener("click", function (e) {
+finish_submit.addEventListener("click", function () {
     document.querySelector(".container").remove();
 
     lastTextContainer.style.display = "block";

@@ -401,31 +401,6 @@ virus_question2 {
     position: relative;
 }
 
-/* Yellow star */
-.yellow_star {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 104px solid transparent;
-    border-right: 124px solid transparent;
-    border-bottom: 115px solid #d9d92e;
-    top: -4%;
-    left: 5%;
-    opacity: .7;
-    transform: rotate(-5deg);
-}
-
-.yellow_star::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 97px solid transparent;
-    border-right: 78px solid transparent;
-    border-top: 131px solid #d9d92e;
-    margin: 31px 0 0 -86px;
-}
-
 
 .third_page-img img {
     width: 100%;
