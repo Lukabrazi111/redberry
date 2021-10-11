@@ -3,10 +3,15 @@ first_input = document.querySelector(".first_input");
 second_input = document.querySelector(".second_input");
 third_input = document.querySelector(".third_input");
 
-const letters = /^[A-Za-z]+$/;
-const regx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const username = document.getElementById("username");
+const lastname = document.getElementById("lastname");
+const email = document.getElementById("email");
 
-// Check for submit
+const letters = /^[A-Za-z]+$/;
+const regx =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+// Check for keyup
 form.addEventListener("keyup", function (e) {
     e.preventDefault();
     checkInputs(e.target);
@@ -55,7 +60,6 @@ function checkInputs(target) {
             second_input.classList.remove("error");
             second_input.textContent = "";
         }
-
     }
 
     if (target.id === "email") {
@@ -71,17 +75,18 @@ function checkInputs(target) {
             third_input.classList.remove("error");
             third_input.textContent = "";
         }
-
     }
 
 
-    if (
-        !first_input.classList.contains("error") &&
-        !second_input.classList.contains("error") &&
-        !third_input.classList.contains("error")
-    ) {
+    if (!first_input.classList.contains("error")
+        && !second_input.classList.contains("error")
+        && !third_input.classList.contains("error")
+        && username.value !== ""
+        && lastname.value !== ""
+        && email.value !== "") {
         arrows.classList.add("activeArrows");
     } else {
         arrows.classList.remove("activeArrows");
     }
+
 }
