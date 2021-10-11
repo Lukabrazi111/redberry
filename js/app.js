@@ -43,8 +43,6 @@ function slideRight() {
         arrow_left.style.display = "block";
     }
 
-    // getRadioButtons();
-
     current++;
 }
 
@@ -65,20 +63,6 @@ function slideLeft() {
 
     current--;
 }
-
-// function getRadioButtons() {
-//     const radioButtonEls = document.querySelectorAll(".radio");
-//
-//     radioButtonEls.forEach(radioButtonEl => {
-//         radioButtonEl.addEventListener("click", function () {
-//             if (this.classList.contains("first_radio")) {
-//                 arrow_right.style.display = "block";
-//             } else {
-//                 arrow_right.style.display = "none";
-//             }
-//         });
-//     });
-// }
 
 arrow_right.addEventListener("click", function () {
     slideRight();
